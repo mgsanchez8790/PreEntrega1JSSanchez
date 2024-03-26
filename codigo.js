@@ -62,3 +62,34 @@ if((nombreMessi == 'Lionel Messi')||(nombreMessi == 'lionel messi')||(nombreMess
 }else{
     alert('Respuesta incorrecta. Le erraste mal!');
 }
+
+// Ciclo de conteo básico
+for (let i = 0; i < 5; i++) {
+    console.log("Conteo: " + i);
+}
+
+
+//Usuario y Contraseña
+let user,pass;
+
+for(let i=1; i<=3; i++){
+    user = prompt('Ingresa tu usuario');
+    pass = prompt('Ingresa la contraseña');
+    if((user == 'vorticesonico') && (pass == 'rock1234')){
+        alert('Hola Sr Stark!');
+        break;
+    }else{
+        alert('Usuario y/o contraseña erroneos');
+    }
+}
+
+// Ciclo condicional 
+let numero = parseInt(prompt("Ingresa tu número favorito, ya sea positivo o negativo:"));
+
+if (numero > 0) {
+    alert("¡El número ingresado también es mi favorito y el más exclusivo!");
+} else if (numero < 0) {
+    alert("¡Así que te gustan los números negativos! Evidentemente tienes una personalidad muy elocuente. ¡Felicitaciones!");
+} else {
+    alert("¡CERO! ¡Eres sorprendente! ¡Felicitaciones!");
+}
