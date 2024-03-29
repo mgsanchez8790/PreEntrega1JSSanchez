@@ -1,5 +1,18 @@
 // Dar la bienvenida al usuario y solicitar su nombre
-let nombre = prompt("¡Bienvenido! Por favor, ingrese su nombre:");
+let nombre = prompt("¡Bienvenido! Por favor, ingrese su apodo:");
+
+//Funcion
+let mostrarCliente = (nombreCompleto) => {
+    let nombreArray = nombreCompleto.split(' ');
+    let nombre = nombreArray[0];
+    let apellido = nombreArray.slice(1).join(' ');
+    console.log("Nombre:", nombre);
+    console.log("Apellido:", apellido);
+};
+
+// Ejemplo de uso
+let nombreCompleto = prompt("¡Bienvenido! Por favor, ingrese su nombre y apellido:");
+mostrarCliente(nombreCompleto);
 
 // Iniciar el juego relacionado con comidas populares argentinas
 let respuesta = prompt("¡Hola, " + nombre + "! Vamos a jugar un juego relacionado con comidas populares argentinas. ¿Cuál es el plato más típico de Argentina?");
@@ -20,7 +33,7 @@ let fechaNacimiento = prompt("Ahora, por favor, ingrese su fecha de nacimiento (
 let fechaActual = new Date();
 let fechaNacimientoArray = fechaNacimiento.split("/");
 let diaNacimiento = parseInt(fechaNacimientoArray[0]);
-let mesNacimiento = parseInt(fechaNacimientoArray[1]) - 1; // Los meses en JavaScript van de 0 a 11
+let mesNacimiento = parseInt(fechaNacimientoArray[1]) - 1; 
 let anoNacimiento = parseInt(fechaNacimientoArray[2]);
 let fechaNacimientoUsuario = new Date(anoNacimiento, mesNacimiento, diaNacimiento);
 let edadEnMilisegundos = fechaActual - fechaNacimientoUsuario;
@@ -30,6 +43,7 @@ let edadEnAnos = Math.floor(edadEnMilisegundos / (1000 * 60 * 60 * 24 * 365.25))
 if (edadEnAnos < 18) {
     alert("Lo siento, " + nombre + ", debes ser mayor de 18 años para ingresar al comercio. Por favor, vuelve cuando cumplas la mayoría de edad.");
 } else {
+    
     // Mostrar mensaje de crédito a favor
     alert("¡Excelente, " + nombre + "! Por jugar, tienes un crédito a favor de $10000 para cualquier compra.");
 
@@ -43,9 +57,7 @@ if (edadEnAnos < 18) {
     alert("Tu saldo disponible es: $" + saldoDisponible.toFixed(2));
 }
 
-
-//condicional simple
-
+//Condicional simple
 let pais = prompt('Ingresa tu pais');
 
 if(pais == 'argentina'){
@@ -68,7 +80,6 @@ for (let i = 0; i < 5; i++) {
     console.log("Conteo: " + i);
 }
 
-
 //Usuario y Contraseña
 let user,pass;
 
@@ -76,7 +87,7 @@ for(let i=1; i<=3; i++){
     user = prompt('Ingresa tu usuario');
     pass = prompt('Ingresa la contraseña');
     if((user == 'vorticesonico') && (pass == 'rock1234')){
-        alert('Hola Sr Stark!');
+        alert('Hola genio!');
         break;
     }else{
         alert('Usuario y/o contraseña erroneos');
@@ -93,3 +104,18 @@ if (numero > 0) {
 } else {
     alert("¡CERO! ¡Eres sorprendente! ¡Felicitaciones!");
 }
+
+//Funcion condicional
+let funcionCondicional = () => {
+    let respuesta = prompt("¿Que estilo de musica prefiers escuchar, rock o electronica?");
+
+    if (respuesta.toLowerCase() === "rock") {
+        alert("¡Genial! nos vamos a entender, por eso te doy la bienvenida a VORTICESONICO OFICIAL. Yo también prefiero el rock.");
+    } else if (respuesta.toLowerCase() === "electronica") {
+        alert("¡Interesante! La electronica también es una excelente opción.");
+    } else {
+        alert("No entiendo tu elección. Por favor, elige entre rock y electronica.");
+    }
+};
+// Ejemplo de uso
+funcionCondicional();
